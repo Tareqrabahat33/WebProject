@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+</head>
+<body>
+
+<h1>Admin Panel</h1>
+
+<nav>
+  <ul>
+    <li><a href="#dashboard">Dashboard</a></li>
+    <li><a href="#manage-users">Manage Users</a></li>
+    <li><a href="#site-settings">Site Settings</a></li>
+    <li><a href="#logout">Logout</a></li>
+  </ul>
+</nav>
+
+<section id="dashboard">
+  <h2>Dashboard</h2>
+  <p>Total Users: 120</p>
+  <button>View Users</button>
+</section>
+
+<section id="manage-users">
+  <h2>Manage Users</h2>
+  <p>Click below to view or edit users.</p>
+  <button>Manage Users</button>
+</section>
+
+<section>
+  <h2>Car Management</h2>
+  <form>
+    <label for="car-model">Car Model:</label>
+    <input type="text" id="car-model" name="car-model" required><br><br>
+
+    <label for="car-price">Price:</label>
+    <input type="number" id="car-price" name="car-price" required><br><br>
+
+    <label for="car-status">Status:</label>
+    <select id="car-status" name="car-status">
+      <option value="available">Available</option>
+      <option value="sold">Sold</option>
+    </select><br><br>
+
+    <button type="submit">Add Car</button>
+  </form>
+</section>
+
+<section id="site-settings">
+  <h2>Site Settings</h2>
+  <p>Current Status: Online</p>
+  <button>Check Status</button>
+</section>
+
+<section id="logout">
+  <h2>Logout</h2>
+  <p>Click below to log out of the admin panel.</p>
+  <a href="main_page.html"> <input type="button" value="Log Out"></a>
+</section>
+
+</body>
+</html>
