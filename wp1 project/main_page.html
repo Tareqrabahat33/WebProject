@@ -5,37 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Louis BOATton</title>
     <style>
-        /* Style for the navigation bar */
+        
         nav {
-            background-color: #333; /* Dark background */
-            overflow: hidden; /* Clear floats */
+            background-color: #001f4d;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        nav a {
-            float: left; /* Align links horizontally */
-            color: rgb(172, 172, 172); /* Text color */
-            text-align: center;
-            padding: 14px 20px; /* Space around links */
-            text-decoration: none; /* Remove underline */
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-
-        nav a:hover {
-            background-color:  rgb(172, 172, 172);/* Light background on hover */
-            color: black; /* Change text color on hover */
+        .nav-brand img {
+            height: 48px;
+            width: 48px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 8px;
+        }
+        .nav-links a {
+            color: #e3e3e3;
+            padding: 14px 18px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover,
+        .nav-links a:focus {
+            background-color: #e3e3e3;
+            color: #001f4d;
+            outline: none;
+        }
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #e3e3e3;
+            border-radius: 2px;
+        }
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-toggle {
+                display: flex;
+                margin-left: auto;
+                margin-top: 8px;
+            }
         }
     </style>
 
 </head>
 <body>
     <nav>
-        <a href="main_page.html">Home</a>
-        <a href="product_page.html">Products</a>
-        <a href="login.html">Log In</a>
-        <a href="sign_up.html">Sign Up</a>
-        <a href="contact_page.html">Contact us</a>
-    
+        <div class="nav-brand">
+            <img src="images/Logo_placeholder.png" alt="Logo" height="48" width="48">
+            <span style="color:#e3e3e3; font-size:1.3rem; font-weight:bold; letter-spacing:1px;">Louis BOATton</span>
+        </div>
+        <div class="nav-toggle" tabindex="0" aria-label="Toggle navigation" onclick="toggleNav()" onkeypress="if(event.key==='Enter'){toggleNav();}">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="main_page.html">Home</a>
+            <a href="product_page.html">Products</a>
+            <a href="login.html">Log In</a>
+            <a href="sign_up.html">Sign Up</a>
+            <a href="contact_page.html">Contact us</a>
+        </div>
     </nav>
-    
+    <script>
+        function toggleNav() {
+            var navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
    <center> <h1><img src="images/Logo_placeholder.png" alt="not found" height="100" width="100"><center> Louis BOATton</center></h1></center>
    
     <hr>
