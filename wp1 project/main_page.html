@@ -7,7 +7,7 @@
     <style>
         
         nav {
-            background-color: #001f4d;
+            background: linear-gradient(to right, #072c62,  #0b72cc);
             box-shadow: 0 2px 8px rgba(0,0,0,0.07);
             display: flex;
             align-items: center;
@@ -42,7 +42,7 @@
         .nav-links a:hover,
         .nav-links a:focus {
             background-color: #e3e3e3;
-            color: #001f4d;
+            color: #03204b;
             outline: none;
         }
         .nav-toggle {
@@ -77,10 +77,208 @@
                 margin-top: 8px;
             }
         }
+
+
+        @keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgb(32, 31, 31);
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background span {
+    width: 13vmin;
+    height: 13vmin;
+    border-radius: 13vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 41;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: rgb(19, 19, 206);
+    top: 76%;
+    left: 93%;
+    animation-duration: 50s;
+    animation-delay: -12s;
+    transform-origin: -9vw 19vh;
+    box-shadow: 26vmin 0 4.174915701807743vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #e6a817;
+    top: 77%;
+    left: 87%;
+    animation-duration: 90s;
+    animation-delay: -8s;
+    transform-origin: -13vw -7vh;
+    box-shadow: 26vmin 0 4.019342432952666vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #e6a817;
+    top: 12%;
+    left: 49%;
+    animation-duration: 23s;
+    animation-delay: -10s;
+    transform-origin: -15vw -12vh;
+    box-shadow: -26vmin 0 3.6430517975314323vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #ccd1d5;
+    top: 91%;
+    left: 1%;
+    animation-duration: 71s;
+    animation-delay: -14s;
+    transform-origin: 22vw -8vh;
+    box-shadow: 26vmin 0 3.4753022804394047vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #c6cbd0;
+    top: 76%;
+    left: 5%;
+    animation-duration: 67s;
+    animation-delay: -1s;
+    transform-origin: 18vw -6vh;
+    box-shadow: 26vmin 0 3.3916960520594284vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #0a43b5;
+    top: 94%;
+    left: 25%;
+    animation-duration: 77s;
+    animation-delay: -17s;
+    transform-origin: -24vw 5vh;
+    box-shadow: -26vmin 0 3.598009563577194vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #0a43b5;
+    top: 61%;
+    left: 38%;
+    animation-duration: 57s;
+    animation-delay: -8s;
+    transform-origin: 23vw 22vh;
+    box-shadow: -26vmin 0 3.356486918805551vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #e6a817;
+    top: 5%;
+    left: 28%;
+    animation-duration: 47s;
+    animation-delay: -2s;
+    transform-origin: 10vw 7vh;
+    box-shadow: 26vmin 0 3.921018081032055vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #0a43b5;
+    top: 100%;
+    left: 89%;
+    animation-duration: 16s;
+    animation-delay: -69s;
+    transform-origin: -22vw 11vh;
+    box-shadow: 26vmin 0 3.7309636778941924vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #b3b9be;
+    top: 56%;
+    left: 64%;
+    animation-duration: 43s;
+    animation-delay: -25s;
+    transform-origin: 13vw 11vh;
+    box-shadow: -26vmin 0 3.5098892801085944vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: #0d4dcd;
+    top: 63%;
+    left: 25%;
+    animation-duration: 23s;
+    animation-delay: -72s;
+    transform-origin: 7vw 21vh;
+    box-shadow: 26vmin 0 3.356624177669445vmin currentColor;
+}
+.background span:nth-child(11) {
+    color: #134dc2;
+    top: 3%;
+    left: 96%;
+    animation-duration: 43s;
+    animation-delay: -59s;
+    transform-origin: 23vw 20vh;
+    box-shadow: 26vmin 0 3.7637387024185545vmin currentColor;
+}
+.background span:nth-child(12) {
+    color: #bbc0c5;
+    top: 51%;
+    left: 91%;
+    animation-duration: 19s;
+    animation-delay: -57s;
+    transform-origin: -10vw 20vh;
+    box-shadow: -26vmin 0 3.61195587370446vmin currentColor;
+}
+.background span:nth-child(13) {
+    color: #b8bec3;
+    top: 28%;
+    left: 62%;
+    animation-duration: 58s;
+    animation-delay: -80s;
+    transform-origin: -15vw -21vh;
+    box-shadow: 26vmin 0 4.090919847197297vmin currentColor;
+}
+.background span:nth-child(14) {
+    color: #0a43b5;
+    top: 10%;
+    left: 69%;
+    animation-duration: 13s;
+    animation-delay: -60s;
+    transform-origin: -23vw 6vh;
+    box-shadow: -26vmin 0 3.5055056599773113vmin currentColor;
+}
+.background span:nth-child(15) {
+    color: #b6bcc1;
+    top: 74%;
+    left: 22%;
+    animation-duration: 34s;
+    animation-delay: -85s;
+    transform-origin: 4vw -23vh;
+    box-shadow: 26vmin 0 3.6144275385958027vmin currentColor;
+}
+.background span:nth-child(16) {
+    color: #1253d6;
+    top: 11%;
+    left: 96%;
+    animation-duration: 72s;
+    animation-delay: -86s;
+    transform-origin: 10vw 12vh;
+    box-shadow: 26vmin 0 3.932731238613565vmin currentColor;
+}
+.background span:nth-child(17) {
+    color: #b6bdc4;
+    top: 44%;
+    left: 83%;
+    animation-duration: 90s;
+    animation-delay: -28s;
+    transform-origin: 20vw -22vh;
+    box-shadow: -26vmin 0 3.9925786631931293vmin currentColor;
+}
+
+
+
     </style>
 
 </head>
-<body>
+<body style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; font-size: larger; color: rgb(240, 248, 255); ">
+        
     <nav>
         <div class="nav-brand">
             <img src="images/Logo_placeholder.png" alt="Logo" height="48" width="48">
@@ -105,38 +303,60 @@
             navLinks.classList.toggle('active');
         }
     </script>
-   <center> <h1><img src="images/Logo_placeholder.png" alt="not found" height="100" width="100"><center> Louis BOATton</center></h1></center>
+
+<div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+ </div>
+
+   <center> <h1 style="color: rgb(240, 248, 255);" ><img src="images/Logo_placeholder.png" alt="not found" height="100" width="100"><center> Louis BOATton</center></h1></center>
    
     <hr>
-    <h3>about us.</h3>
-    <p>Welcome to the best yacht company based in Damascus, <strong>Syria</strong>. <br><iframe src="https://maps.app.goo.gl/FsSpqnrViFsszp6n9?g_st=aw" frameborder="2"></iframe>
+    <h3 style="color: rgb(240, 248, 255);">about us.</h3>
+    <p style="color: rgb(240, 248, 255);">Welcome to the best yacht company based in Damascus, <strong>Syria</strong>. <br><iframe src="https://maps.app.goo.gl/FsSpqnrViFsszp6n9?g_st=aw" frameborder="2"></iframe>
     <br>We have the most reliable and comfortable yachts that fit all your needs, with affordable prices and sales all year long. </p>
-    <h3>Latest News!</h3>
-    <dl><strong>Our best sellers:</strong></dl>
-    <dt>
-        <ol>
+    <h3 style="color: rgb(240, 248, 255);">Latest News!</h3>
+    <dl style="color: rgb(240, 248, 255);"><strong>Our best sellers:</strong></dl>
+    <dt style="color: rgb(240, 248, 255);">
+        <ol style="color: rgb(240, 248, 255);">
            <li>MATINA</li>
            <li>FENICE</li>
            <li>AQUAZOE ALEX</li>
         </ol>
     </dt>
-    <dl><strong>This months sale:</strong></dl>
-    <dt>
+    <dl style="color: rgb(240, 248, 255);"><strong>This months sale:</strong></dl>
+    <dt style="color: rgb(240, 248, 255);">
         <ul>
             <li>20% discount off of your first purchase</li>
             <li>10% discount off of your second purchase</li>
         </ul>
     </dt>
-    <dl><strong>Benfits you get with your purchase:</strong></dl>
-    <dt>
+    <dl style="color: rgb(240, 248, 255);"><strong>Benfits you get with your purchase:</strong></dl>
+    <dt style="color: rgb(240, 248, 255);">
         <ul>
-            <li>1-Year Free Docking <details><summary>More Info</summary><p>Secure your yacht at no extra cost, We cover your first year of docking fees at out partner marinas.</p></details></li>
-            <li>Tailored to Your Taste <details><summary>More Info</summary><p>Enjoy complimentary customization options on select models, from interior finishes to tech upgrades, we help make your yacht uniquely yours.</p></details></li>
-            <li>Worry-Free Ownership, Day One <details><summary>More Info</summary><p></p>We include a comprehensive servicing plan, covering routine inspections, engine maintenance, and more for up to 12 months.</details></li>
+            <li>1-Year Free Docking <details><summary style="color: rgb(230, 168, 23);" >More Info</summary><p>Secure your yacht at no extra cost, We cover your first year of docking fees at out partner marinas.</p></details></li>
+            <li>Tailored to Your Taste <details><summary style="color: rgb(230, 168, 23);" >More Info</summary><p>Enjoy complimentary customization options on select models, from interior finishes to tech upgrades, we help make your yacht uniquely yours.</p></details></li>
+            <li>Worry-Free Ownership, Day One <details><summary style="color: rgb(230, 168, 23);" >More Info</summary><p>We include a comprehensive servicing plan, covering routine inspections, engine maintenance, and more for up to 12 months.</p></details></li>
         </ul>
     </dt>
     <hr>
-    <footer style="background:#001f4d;color:#e3e3e3;text-align:center;padding:16px 0;margin-top:32px;font-size:1rem;">
+    <footer style="background: linear-gradient(to right, #072c62,  #0b72cc);color:#e3e3e3;text-align:center;padding:16px 0;margin-top:32px;font-size:1rem;">
         &copy; 2025 Louis BOATton &mdash; All rights reserved.
     </footer>
   </body>

@@ -5,35 +5,324 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
-        /* Style for the navigation bar */
+        
         nav {
-            background-color: #333; /* Dark background */
-            overflow: hidden; /* Clear floats */
+            background: linear-gradient(to right, #072c62,  #0b72cc);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        nav a {
-            float: left; /* Align links horizontally */
-            color: rgb(172, 172, 172); /* Text color */
-            text-align: center;
-            padding: 14px 20px; /* Space around links */
-            text-decoration: none; /* Remove underline */
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .nav-brand img {
+            height: 48px;
+            width: 48px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 8px;
+        }
+        .nav-links a {
+            color: #e3e3e3;
+            padding: 14px 18px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover,
+        .nav-links a:focus {
+            background-color: #e3e3e3;
+            color: #03204b;
+            outline: none;
+        }
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #e3e3e3;
+            border-radius: 2px;
+        }
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-toggle {
+                display: flex;
+                margin-left: auto;
+                margin-top: 8px;
+            }
         }
 
-        nav a:hover {
-            background-color:  rgb(172, 172, 172);/* Light background on hover */
-            color: black; /* Change text color on hover */
-        }
+
+        @keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgb(32, 31, 31);
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background span {
+    width: 13vmin;
+    height: 13vmin;
+    border-radius: 13vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 41;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: rgb(19, 19, 206);
+    top: 76%;
+    left: 93%;
+    animation-duration: 50s;
+    animation-delay: -12s;
+    transform-origin: -9vw 19vh;
+    box-shadow: 26vmin 0 4.174915701807743vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #e6a817;
+    top: 77%;
+    left: 87%;
+    animation-duration: 90s;
+    animation-delay: -8s;
+    transform-origin: -13vw -7vh;
+    box-shadow: 26vmin 0 4.019342432952666vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #e6a817;
+    top: 12%;
+    left: 49%;
+    animation-duration: 23s;
+    animation-delay: -10s;
+    transform-origin: -15vw -12vh;
+    box-shadow: -26vmin 0 3.6430517975314323vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #ccd1d5;
+    top: 91%;
+    left: 1%;
+    animation-duration: 71s;
+    animation-delay: -14s;
+    transform-origin: 22vw -8vh;
+    box-shadow: 26vmin 0 3.4753022804394047vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #c6cbd0;
+    top: 76%;
+    left: 5%;
+    animation-duration: 67s;
+    animation-delay: -1s;
+    transform-origin: 18vw -6vh;
+    box-shadow: 26vmin 0 3.3916960520594284vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #0a43b5;
+    top: 94%;
+    left: 25%;
+    animation-duration: 77s;
+    animation-delay: -17s;
+    transform-origin: -24vw 5vh;
+    box-shadow: -26vmin 0 3.598009563577194vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #0a43b5;
+    top: 61%;
+    left: 38%;
+    animation-duration: 57s;
+    animation-delay: -8s;
+    transform-origin: 23vw 22vh;
+    box-shadow: -26vmin 0 3.356486918805551vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #e6a817;
+    top: 5%;
+    left: 28%;
+    animation-duration: 47s;
+    animation-delay: -2s;
+    transform-origin: 10vw 7vh;
+    box-shadow: 26vmin 0 3.921018081032055vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #0a43b5;
+    top: 100%;
+    left: 89%;
+    animation-duration: 16s;
+    animation-delay: -69s;
+    transform-origin: -22vw 11vh;
+    box-shadow: 26vmin 0 3.7309636778941924vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #b3b9be;
+    top: 56%;
+    left: 64%;
+    animation-duration: 43s;
+    animation-delay: -25s;
+    transform-origin: 13vw 11vh;
+    box-shadow: -26vmin 0 3.5098892801085944vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: #0d4dcd;
+    top: 63%;
+    left: 25%;
+    animation-duration: 23s;
+    animation-delay: -72s;
+    transform-origin: 7vw 21vh;
+    box-shadow: 26vmin 0 3.356624177669445vmin currentColor;
+}
+.background span:nth-child(11) {
+    color: #134dc2;
+    top: 3%;
+    left: 96%;
+    animation-duration: 43s;
+    animation-delay: -59s;
+    transform-origin: 23vw 20vh;
+    box-shadow: 26vmin 0 3.7637387024185545vmin currentColor;
+}
+.background span:nth-child(12) {
+    color: #bbc0c5;
+    top: 51%;
+    left: 91%;
+    animation-duration: 19s;
+    animation-delay: -57s;
+    transform-origin: -10vw 20vh;
+    box-shadow: -26vmin 0 3.61195587370446vmin currentColor;
+}
+.background span:nth-child(13) {
+    color: #b8bec3;
+    top: 28%;
+    left: 62%;
+    animation-duration: 58s;
+    animation-delay: -80s;
+    transform-origin: -15vw -21vh;
+    box-shadow: 26vmin 0 4.090919847197297vmin currentColor;
+}
+.background span:nth-child(14) {
+    color: #0a43b5;
+    top: 10%;
+    left: 69%;
+    animation-duration: 13s;
+    animation-delay: -60s;
+    transform-origin: -23vw 6vh;
+    box-shadow: -26vmin 0 3.5055056599773113vmin currentColor;
+}
+.background span:nth-child(15) {
+    color: #b6bcc1;
+    top: 74%;
+    left: 22%;
+    animation-duration: 34s;
+    animation-delay: -85s;
+    transform-origin: 4vw -23vh;
+    box-shadow: 26vmin 0 3.6144275385958027vmin currentColor;
+}
+.background span:nth-child(16) {
+    color: #1253d6;
+    top: 11%;
+    left: 96%;
+    animation-duration: 72s;
+    animation-delay: -86s;
+    transform-origin: 10vw 12vh;
+    box-shadow: 26vmin 0 3.932731238613565vmin currentColor;
+}
+.background span:nth-child(17) {
+    color: #b6bdc4;
+    top: 44%;
+    left: 83%;
+    animation-duration: 90s;
+    animation-delay: -28s;
+    transform-origin: 20vw -22vh;
+    box-shadow: -26vmin 0 3.9925786631931293vmin currentColor;
+}
+
+
+
     </style>
+
 </head>
-<body>
-    <nav>
-        <a href="main_page.html">Home</a>
-        <a href="product_page.html">Products</a>
-        <a href="login.html">Log In</a>
-        <a href="sign_up.html">Sign Up</a>
-        <a href="contact_page.html">Contact us</a>
+<body style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; font-size: larger; color: rgb(240, 248, 255); ">    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+     </div>
     
+
+    <nav>
+        <div class="nav-brand">
+            <img src="images/Logo_placeholder.png" alt="Logo" height="48" width="48">
+            <span style="color:#e3e3e3; font-size:1.3rem; font-weight:bold; letter-spacing:1px;">Louis BOATton</span>
+        </div>
+        <div class="nav-toggle" tabindex="0" aria-label="Toggle navigation" onclick="toggleNav()" onkeypress="if(event.key==='Enter'){toggleNav();}">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="main_page.html">Home</a>
+            <a href="product_page.html">Products</a>
+            <a href="login.html">Log In</a>
+            <a href="sign_up.html">Sign Up</a>
+            <a href="contact_page.html">Contact us</a>
+        </div>
     </nav>
+    <script>
+        function toggleNav() {
+            var navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
     <form action="">
         <fieldset>
             <legend><h1>Contact us</h1></legend>
@@ -41,5 +330,8 @@
             <p>Phone: 0921783133</p>
         </fieldset>
     </form>
+    <footer style="background: linear-gradient(to right, #072c62,  #0b72cc);color:#e3e3e3;text-align:center;padding:16px 0;margin-top:32px;font-size:1rem;">
+        &copy; 2025 Louis BOATton &mdash; All rights reserved.
+    </footer>
 </body>
 </html>
