@@ -34,7 +34,6 @@
     </div>
 
     <div class="admin-container">
-      <!-- Admin Sidebar Navigation -->
       <div class="admin-sidebar">
         <a href="#dashboard" class="active">Dashboard</a>
         <a href="#manage-users">Manage Users</a>
@@ -43,9 +42,7 @@
         <a href="#logout">Logout</a>
       </div>
 
-      <!-- Admin Content Area -->
       <div class="admin-content">
-        <!-- Dashboard Section -->
         <section id="dashboard" class="admin-panel">
           <h2>Dashboard</h2>
           
@@ -74,14 +71,12 @@
           <button class="admin-btn">View Detailed Reports</button>
         </section>
 
-        <!-- Manage Users Section -->
         <section id="manage-users" class="admin-panel">
           <h2>Manage Users</h2>
           <p>Click below to view or edit user accounts.</p>
           <button class="admin-btn">View All Users</button>
         </section>
 
-        <!-- Yacht Management Section -->
         <section id="yacht-management" class="admin-panel">
           <h2>Yacht Management</h2>
           <form class="admin-form">
@@ -113,7 +108,6 @@
           </form>
         </section>
 
-        <!-- Site Settings Section -->
         <section id="site-settings" class="admin-panel">
           <h2>Site Settings</h2>
           <p>Current Status: <span class="gold-text">Online</span></p>
@@ -121,7 +115,6 @@
           <button class="admin-btn admin-btn-danger">Maintenance Mode</button>
         </section>
 
-        <!-- Logout Section -->
         <section id="logout" class="admin-panel">
           <h2>Logout</h2>
           <p>Click below to log out of the admin panel.</p>
@@ -144,7 +137,6 @@
       navLinks.classList.toggle('active');
     }
     
-    // Highlight active section in sidebar
     document.addEventListener('DOMContentLoaded', function() {
       const sidebarLinks = document.querySelectorAll('.admin-sidebar a');
       
