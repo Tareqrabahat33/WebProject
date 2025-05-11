@@ -3,88 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louis BOATton</title>
-    <style>
-        
-        nav {
-            background-color: #001f4d;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 32px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .nav-brand img {
-            height: 48px;
-            width: 48px;
-        }
-        .nav-links {
-            display: flex;
-            gap: 8px;
-        }
-        .nav-links a {
-            color: #e3e3e3;
-            padding: 14px 18px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: background 0.2s, color 0.2s;
-        }
-        .nav-links a:hover,
-        .nav-links a:focus {
-            background-color: #e3e3e3;
-            color: #001f4d;
-            outline: none;
-        }
-        .nav-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 4px;
-        }
-        .nav-toggle span {
-            width: 25px;
-            height: 3px;
-            background: #e3e3e3;
-            border-radius: 2px;
-        }
-        @media (max-width: 700px) {
-            nav {
-                flex-direction: column;
-                align-items: stretch;
-                padding: 0 10px;
-            }
-            .nav-links {
-                flex-direction: column;
-                width: 100%;
-                display: none;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .nav-toggle {
-                display: flex;
-                margin-left: auto;
-                margin-top: 8px;
-            }
-        }
-    </style>
-
+    <title>Louis BOATton - Luxury Yachts</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main_page.css">
+    <link rel="stylesheet" href="css/slider.css">
 </head>
 <body>
     <nav>
         <div class="nav-brand">
-            <img src="images/Logo_placeholder.png" alt="Logo" height="48" width="48">
-            <span style="color:#e3e3e3; font-size:1.3rem; font-weight:bold; letter-spacing:1px;">Louis BOATton</span>
+            <img src="images/BOATTON SCARP-01.png" alt="Louis BOATton Logo" height="60">
+            <span class="brand-text">Louis BOATton</span>
         </div>
         <div class="nav-toggle" tabindex="0" aria-label="Toggle navigation" onclick="toggleNav()" onkeypress="if(event.key==='Enter'){toggleNav();}">
             <span></span>
@@ -99,45 +27,98 @@
             <a href="contact_page.html">Contact us</a>
         </div>
     </nav>
-    <script>
-        function toggleNav() {
-            var navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-    </script>
-   <center> <h1><img src="images/Logo_placeholder.png" alt="not found" height="100" width="100"><center> Louis BOATton</center></h1></center>
-   
-    <hr>
-    <h3>about us.</h3>
-    <p>Welcome to the best yacht company based in Damascus, <strong>Syria</strong>. <br><iframe src="https://maps.app.goo.gl/FsSpqnrViFsszp6n9?g_st=aw" frameborder="2"></iframe>
-    <br>We have the most reliable and comfortable yachts that fit all your needs, with affordable prices and sales all year long. </p>
-    <h3>Latest News!</h3>
-    <dl><strong>Our best sellers:</strong></dl>
-    <dt>
-        <ol>
-           <li>MATINA</li>
-           <li>FENICE</li>
-           <li>AQUAZOE ALEX</li>
-        </ol>
-    </dt>
-    <dl><strong>This months sale:</strong></dl>
-    <dt>
-        <ul>
-            <li>20% discount off of your first purchase</li>
-            <li>10% discount off of your second purchase</li>
-        </ul>
-    </dt>
-    <dl><strong>Benfits you get with your purchase:</strong></dl>
-    <dt>
-        <ul>
-            <li>1-Year Free Docking <details><summary>More Info</summary><p>Secure your yacht at no extra cost, We cover your first year of docking fees at out partner marinas.</p></details></li>
-            <li>Tailored to Your Taste <details><summary>More Info</summary><p>Enjoy complimentary customization options on select models, from interior finishes to tech upgrades, we help make your yacht uniquely yours.</p></details></li>
-            <li>Worry-Free Ownership, Day One <details><summary>More Info</summary><p></p>We include a comprehensive servicing plan, covering routine inspections, engine maintenance, and more for up to 12 months.</details></li>
-        </ul>
-    </dt>
-    <hr>
-    <footer style="background:#001f4d;color:#e3e3e3;text-align:center;padding:16px 0;margin-top:32px;font-size:1rem;">
-        &copy; 2025 Louis BOATton &mdash; All rights reserved.
+    
+    <main class="container">
+        <div class="centered-header">
+            <h1 class="main-title">Louis <span class="gold-text">BOATton</span></h1>
+            <div class="header-divider"></div>
+            <p class="header-tagline">Experience unparalleled luxury on the water with our premium yacht collection</p>
+        </div>
+        
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to the best yacht company based in Damascus, <strong>Syria</strong>. With decades of experience in luxury marine craftsmanship, we pride ourselves on delivering exceptional quality and service.</p>
+            
+            <div class="map-container">
+                <iframe src="https://maps.app.goo.gl/FsSpqnrViFsszp6n9?g_st=aw" frameborder="2" width="100%" height="300" title="Our Location in Damascus, Syria"></iframe>
+            </div>
+            
+            <p>We have the most reliable and comfortable yachts that fit all your needs, with affordable prices and sales all year long. Our team of expert craftsmen and designers work tirelessly to create vessels that combine elegance, performance, and comfort.</p>
+        </section>
+        
+        <div class="cta-box">
+            <h3>Ready to Explore Our Fleet?</h3>
+            <p>Discover our range of luxury yachts and find your perfect match</p>
+            <a href="product_page.html" class="btn btn-gold">View Our Collection</a>
+        </div>
+        
+        <section id="news">
+            <h2>Latest News</h2>
+            
+            <div class="bestsellers-slider-container">
+                <div class="bestsellers-content">
+                    <h3>Our Best Sellers</h3>
+                    <ol>
+                        <li><span class="navy-text">MATINA</span> - Our flagship luxury yacht with state-of-the-art amenities</li>
+                        <li><span class="navy-text">FENICE</span> - Perfect blend of performance and comfort</li>
+                        <li><span class="navy-text">AQUAZOE ALEX</span> - Award-winning design with unmatched elegance</li>
+                    </ol>
+                </div>
+                
+                <div class="slider-container">
+                    <div class="slider">
+                        <img class="slider-img" src="images/AQUAZOE_ALEX.png" alt="Image 1">
+                        <img class="slider-img" src="images/BLUEGAME_47.png" alt="Image 2">
+                        <img class="slider-img" src="images/FAIRLINE_50FT.png" alt="Image 3">
+                        <div class="slider-prev" onclick="changeSlide(-1)">&#10094;</div>
+                        <div class="slider-next" onclick="changeSlide(1)">&#10095;</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>This Month's Special Offers</h3>
+            <ul>
+                <li><span class="gold-text">20% discount</span> off of your first purchase</li>
+                <li><span class="gold-text">10% discount</span> off of your second purchase</li>
+                <li><span class="gold-text">Free consultation</span> with our yacht design specialists</li>
+            </ul>
+            
+            <h3>Benefits You Get With Your Purchase</h3>
+            <ul class="benefits-list">
+                <li>
+                    <strong>1-Year Free Docking</strong>
+                    <details>
+                        <summary>More Info</summary>
+                        <p>Secure your yacht at no extra cost. We cover your first year of docking fees at our partner marinas across the Mediterranean.</p>
+                    </details>
+                </li>
+                <li>
+                    <strong>Tailored to Your Taste</strong>
+                    <details>
+                        <summary>More Info</summary>
+                        <p>Enjoy complimentary customization options on select models, from interior finishes to tech upgrades, we help make your yacht uniquely yours.</p>
+                    </details>
+                </li>
+                <li>
+                    <strong>Worry-Free Ownership, Day One</strong>
+                    <details>
+                        <summary>More Info</summary>
+                        <p>We include a comprehensive servicing plan, covering routine inspections, engine maintenance, and more for up to 12 months.</p>
+                    </details>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Louis BOATton &mdash; All rights reserved.</p>
+            <p>The ultimate destination for luxury yacht enthusiasts</p>
+        </div>
     </footer>
-  </body>
+    
+    <!-- External JavaScript Files -->
+    <script src="js/navigation.js"></script>
+    <script src="js/slider.js"></script>
+</body>
 </html>

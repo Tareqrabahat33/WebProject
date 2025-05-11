@@ -3,100 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <style>
-        /* Style for the navigation bar */
-        nav {
-            background-color: #333; /* Dark background */
-            overflow: hidden; /* Clear floats */
-        }
-
-        nav a {
-            float: left; /* Align links horizontally */
-            color: rgb(172, 172, 172);/* Text color */
-            text-align: center;
-            padding: 14px 20px; /* Space around links */
-            text-decoration: none; /* Remove underline */
-        }
-
-        nav a:hover {
-            background-color: rgb(172, 172, 172); /* Light background on hover */
-            color: black; /* Change text color on hover */
-        }
-    </style>
+    <title>Our Yacht Collection - Louis BOATton</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product_page.css">
 </head>
 <body>
-    <nav>
-        <a href="main_page.html">Home</a>
-        <a href="product_page.html">Products</a>
-        <a href="login.html">Log In</a>
-        <a href="sign_up.html">Sign Up</a>
-        <a href="contact_page.html">Contact us</a>
     
+    <nav>
+        <div class="nav-brand">
+            <img src="images/BOATTON SCARP-01.png" alt="Louis BOATton Logo" height="60">
+            <span class="brand-text">Louis BOATton</span>
+        </div>
+        <div class="nav-toggle" tabindex="0" aria-label="Toggle navigation" onclick="toggleNav()" onkeypress="if(event.key==='Enter'){toggleNav();}">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="main_page.html">Home</a>
+            <a href="product_page.html">Products</a>
+            <a href="login.html">Log In</a>
+            <a href="sign_up.html">Sign Up</a>
+            <a href="contact_page.html">Contact us</a>
+        </div>
     </nav>
-    <h2>Explore our Yachts!</h2>
-    <p>We offer many types such as:</p>
-    <ol>
-        <table border="2">
-        <li>Temp</li>
-            <tr>
-                <th>Model</th>
-                <th>Price</th>
-                <th>Picture</th>
-            </tr>
-            <tr>
-                <td>AQUAZOE Alex </td>
-                <td>4100$</td>
-                <td><img src="images/AQUAZOE_ALEX.png" alt="not found" height="100" width="180"></td>
-            </tr>
-            <tr>
-                <td>BLUEGAME 47</td>
-                <td>5350$</td>
-                <td><img src="images/BLUEGAME_47.png" alt="not found" height="100" width="180"></td>
-            </tr>
-            
-        </table>
-        <hr>
-        <li>Temp</li>
-        <table border="2">
-        <tr>
-            <th>Model</th>
-            <th>Price</th>
-            <th>Picture</th>
-        </tr>
-        <tr>
-            <td>FAIRLINE 50ft</td>
-            <td>3320$</td>
-            <td><img src="images/FAIRLINE_50FT.png" alt="not found" height="100" width="160"></td>
-        </tr>
-        <tr>
-            <td>FENICE</td>
-            <td>7400$</td>
-            <td><img src="images/FENICE.png" alt="not found" height="100" width="160"></td>
-    </tr>
-</table>
-<hr>
-<table border="2">
-    <li>Temp</li>
-    <tr>
-        <th>Model</th>
-        <th>Price</th>
-        <th>Picture</th>
-    </tr>
-    <tr>
-        <td>MATINA</td>
-        <td>11000$</td>
-        <td><img src="images/MATINA.png" alt="not found" height="100" width="180"></td>
-    </tr>
-    <tr>
-        <td>SERALIA</td>
-        <td>4300$</td>
-        <td><img src="images/SERALIA.png" alt="not found" height="100" width="180"></td>
-    </tr>
-</table>
-    </ol>
-    <hr>
-<p><strong>New Yachts available soon!!</strong><br><a href="sign_up.html">Sign Up</a> so you dont miss any updates</p>
+    
+    <main class="container">
+        <div class="page-header">
+            <h1>Our Luxury Yacht Collection</h1>
+            <p>Discover the perfect blend of elegance, performance, and comfort</p>
+        </div>
+        
 
+        
+        <section>
+            <h3>Filter By Category</h3>
+            <div class="filter-container">
+                <span class="filter-tag active">All Yachts</span>
+                <span class="filter-tag">Luxury</span>
+                <span class="filter-tag">Performance</span>
+                <span class="filter-tag">Cruiser</span>
+                <span class="filter-tag">Special Offers</span>
+            </div>
+        </section>
+        
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/AQUAZOE_ALEX.png" alt="AQUAZOE Alex Yacht">
+                    <span class="product-status">Best Seller</span>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">AQUAZOE Alex</h3>
+                    <div class="product-specs">
+                        <span>Length: 75 ft</span>
+                        <span>Year: 2024</span>
+                        <span>Cabins: 4</span>
+                    </div>
+                    <p>Award-winning design with unmatched elegance and superior comfort for unforgettable journeys.</p>
+                    <div class="product-price">
+                        <div class="rent-price">Rent: $4,100/day</div>
+                        <div class="buy-price">Buy: $4,100,000</div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-view">View Details</a>
+                        <a href="#" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/BLUEGAME_47.png" alt="BLUEGAME 47 Yacht">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">BLUEGAME 47</h3>
+                    <div class="product-specs">
+                        <span>Length: 47 ft</span>
+                        <span>Year: 2023</span>
+                        <span>Cabins: 3</span>
+                    </div>
+                    <p>Combining innovative design with exceptional performance for the ultimate sailing experience.</p>
+                    <div class="product-price">
+                        <div class="rent-price">Rent: $5,350/day</div>
+                        <div class="buy-price">Buy: $5,350,000</div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-view">View Details</a>
+                        <a href="#" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/FAIRLINE_50FT.png" alt="FAIRLINE 50ft Yacht">
+                    <span class="product-status">Sale</span>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">FAIRLINE 50ft</h3>
+                    <div class="product-specs">
+                        <span>Length: 50 ft</span>
+                        <span>Year: 2022</span>
+                        <span>Cabins: 3</span>
+                    </div>
+                    <p>Spacious and elegant design perfect for extended cruising with family and friends.</p>
+                    <div class="product-price">
+                        <div class="rent-price">Rent: $3,800/day</div>
+                        <div class="buy-price">Buy: $3,320,000</div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-view">View Details</a>
+                        <a href="#" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/FENICE.png" alt="FENICE Yacht">
+                    <span class="product-status">Premium</span>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">FENICE</h3>
+                    <div class="product-specs">
+                        <span>Length: 90 ft</span>
+                        <span>Year: 2024</span>
+                        <span>Cabins: 5</span>
+                    </div>
+                    <p>Perfect blend of performance and comfort with state-of-the-art technology and luxurious amenities.</p>
+                    <div class="product-price">
+                        <div class="rent-price">Rent: $7,400/day</div>
+                        <div class="buy-price">Buy: $7,400,000</div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-view">View Details</a>
+                        <a href="#" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/MATINA.png" alt="MATINA Yacht">
+                    <span class="product-status">Flagship</span>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">MATINA</h3>
+                    <div class="product-specs">
+                        <span>Length: 120 ft</span>
+                        <span>Year: 2024</span>
+                        <span>Cabins: 7</span>
+                    </div>
+                    <p>Our flagship luxury yacht with state-of-the-art amenities and unparalleled craftsmanship.</p>
+                    <div class="product-price">
+                        <div class="rent-price">Rent: $11,000/day</div>
+                        <div class="buy-price">Buy: $11,000,000</div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-view">View Details</a>
+                        <a href="#" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/SERALIA.png" alt="SERALIA Yacht">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">SERALIA</h3>
+                    <div class="product-specs">
+                        <span>Length: 65 ft</span>
+                        <span>Year: 2023</span>
+                        <span>Cabins: 4</span>
+                    </div>
+                    <p>Elegant and versatile yacht designed for both day cruising and extended voyages.</p>
+                    <div class="product-price">
+                        <div class="rent-price">Rent: $4,300/day</div>
+                        <div class="buy-price">Buy: $4,300,000</div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="#" class="btn-view">View Details</a>
+                        <a href="#" class="btn-inquire">Inquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section>
+            <div class="page-header">
+                <h2>New Yacht Models Coming Soon!</h2>
+                <p>Be the first to know about our newest additions to the fleet and exclusive pre-launch offers.</p>
+            </div>
+            <div class="text-center">
+                <a href="sign_up.html" class="signup-btn">Sign Up for Updates</a>
+            </div>
+        </section>
+        
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Next »</a>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Louis BOATton &mdash; All rights reserved.</p>
+            <p>The ultimate destination for luxury yacht enthusiasts</p>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleNav() {
+            var navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const filterTags = document.querySelectorAll('.filter-tag');
+            
+            filterTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    filterTags.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    // In a real application, you would filter the products here
+                });
+            });
+            
+            // Rent/Buy toggle functionality
+            const rentOption = document.getElementById('rent-option');
+            const buyOption = document.getElementById('buy-option');
+            
+            // Default to rent option on page load
+            document.body.classList.remove('buy-mode');
+            
+            rentOption.addEventListener('click', function() {
+                rentOption.classList.add('active');
+                buyOption.classList.remove('active');
+                document.body.classList.remove('buy-mode');
+            });
+            
+            buyOption.addEventListener('click', function() {
+                buyOption.classList.add('active');
+                rentOption.classList.remove('active');
+                document.body.classList.add('buy-mode');
+            });
+        });
+    </script>
 </body>
 </html>

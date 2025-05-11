@@ -3,71 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <style>
-        /* Style for the navigation bar */
-        nav {
-            background-color: #333; /* Dark background */
-            overflow: hidden; /* Clear floats */
-        }
-
-        nav a {
-            float: left; /* Align links horizontally */
-            color:  rgb(172, 172, 172); /* Text color */
-            text-align: center;
-            padding: 14px 20px; /* Space around links */
-            text-decoration: none; /* Remove underline */
-        }
-
-        nav a:hover {
-            background-color:  rgb(172, 172, 172); /* Light background on hover */
-            color: black; /* Change text color on hover */
-        }
-    </style>
+    <title>Sign Up - Louis BOATton</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signup_page.css">
 </head>
 <body>
     <nav>
-        <a href="main_page.html">Home</a>
-        <a href="product_page.html">Products</a>
-        <a href="login.html">Log In</a>
-        <a href="sign_up.html">Sign Up</a>
-        <a href="contact_page.html">Contact us</a>
-    
+        <div class="nav-brand">
+            <img src="images/BOATTON SCARP-01.png" alt="Louis BOATton Logo" height="60">
+            <span class="brand-text">Louis BOATton</span>
+        </div>
+        <div class="nav-toggle" tabindex="0" aria-label="Toggle navigation" onclick="toggleNav()" onkeypress="if(event.key==='Enter'){toggleNav();}">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="main_page.html">Home</a>
+            <a href="product_page.html">Products</a>
+            <a href="login.html">Log In</a>
+            <a href="sign_up.html">Sign Up</a>
+            <a href="contact_page.html">Contact us</a>
+        </div>
     </nav>
-    <h1> <center>Louis BOATton </center></h1>
-    <h2><center> The best place to buy your dream boat!</center></h2>
-    
-    <form action="">
-    <fieldset>
-<legend>first lets make you an accounnt </legend>
- <center><label for="">First Name: </label>
-<input type="text" placeholder="Enter your first name">
-&nbsp; &nbsp; &nbsp; &nbsp;
-<label for=""> Last name: </label>
-<input type="text" placeholder="Enter your last name"><br><br>
 
-<label for="date">Select Date:</label>
-<input type="date" id="date" name="date">
-<br><br>
+    <main class="container">
+        <div class="page-header">
+            <h1>Join the Louis BOATton Family</h1>
+            <p>Create your account to access exclusive yacht listings and personalized services</p>
+        </div>
 
+        <section class="signup-section">
+            <div class="signup-container">
+                <div class="signup-content">
+                    <h2>Create Your Account</h2>
+                    <p>Fill in the details below to register for a Louis BOATton account.</p>
+                    
+                    <form class="signup-form" action="/sign-up" method="post">
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Create a password" required>
+                            <small>Password must be at least 8 characters long and include a number and special character</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the <a href="terms and conditions.html">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for exclusive yacht offers and events</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                    
+                    <div class="signup-footer">
+                        <p>Already have an account? <a href="login.html">Log In</a></p>
+                    </div>
+                </div>
+                
+                <div class="signup-image">
+                    <img src="images/yacht-luxury.jpg" alt="Luxury Yacht Experience">
+                    <div class="signup-overlay">
+                        <h3>Exclusive Benefits</h3>
+                        <ul>
+                            <li>Access to premium yacht listings</li>
+                            <li>Personalized yacht recommendations</li>
+                            <li>VIP invitations to yacht shows</li>
+                            <li>Priority booking for sea trials</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<label for="">Email:</label>
-<input type="email" placeholder="example@gmail.com"><br><br>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/BOATTON SCARP-01.png" alt="Louis BOATton Logo" height="40">
+                    <p>Louis BOATton &mdash; Luxury Yachts</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="main_page.html">Home</a>
+                        <a href="product_page.html">Products</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact_page.html">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Account</h4>
+                        <a href="login.html">Log In</a>
+                        <a href="sign_up.html">Sign Up</a>
+                        <a href="#">My Profile</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Louis BOATton. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-<label for="">Password:</label>
-<input type="password" placeholder="Enter your password"><br><br>
+    <script>
+        function toggleNav() {
+            var navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
-<a href="main_page.html"><input type="button" value="continue"></a><br><br>
-
-Already have an account? <a href="login.html">Log In</a>
-
-</center><hr>
-
-I agree to the <a href="terms and conditions.html">Terms and conditions</a><input type="checkbox">
-<br><br>
-
-</fieldset>
-
-</form>
 </body>
 </html>
