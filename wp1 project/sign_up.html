@@ -67,7 +67,7 @@
                         </div>
                         
                         <div class="form-group checkbox-group">
-                            <input type="checkbox" id="terms" name="terms" required>
+                            <input onclick="showconfirm()" type="checkbox" id="terms" name="terms" required>
                             <label for="terms">I agree to the <a href="terms and conditions.html">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
                         </div>
                         
@@ -139,6 +139,14 @@
         function toggleNav() {
             var navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
+        }
+        function showconfirm(){
+            let res=confirm("we will be able to access your personal info, sure you want to procced?");
+            if (res){
+                console.log("confirmed")
+            } else{
+                console.log("canceled")
+            }
         }
     </script>
 
