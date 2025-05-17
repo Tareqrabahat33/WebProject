@@ -6,6 +6,7 @@
     <title>Log In - Louis BOATton</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login_page.css">
+    <link rel="stylesheet" href="css/auth-nav.css">
 </head>
 <body>
     <nav>
@@ -21,8 +22,15 @@
         <div class="nav-links" id="navLinks">
             <a href="main_page.html">Home</a>
             <a href="product_page.html">Products</a>
-            <a href="login.html">Log In</a>
-            <a href="sign_up.html">Sign Up</a>
+            <!-- These links will change depending on login status -->
+            <span id="authLinks">
+                <a href="login.html">Log In</a>
+                <a href="sign_up.html">Sign Up</a>
+            </span>
+            <span id="userLinks">
+                <a href="#" id="welcomeUser">Welcome, User</a>
+                <a href="/wp1%20project/wp1%20project/php/logout.php">Log Out</a>
+            </span>
             <a href="contact_page.html">Contact us</a>
         </div>
     </nav>
@@ -39,15 +47,27 @@
                     <h2>Sign In</h2>
                     <p>Enter your credentials to access your account</p>
                     
-                    <form class="login-form" action="/login" method="post">
+                    <div id="registrationSuccess" style="display: none; color: green; margin-bottom: 15px; padding: 10px; background-color: #f0fff0; border-radius: 5px;">
+                        Registration successful! Please log in with your credentials.
+                    </div>
+                    
+                    <div id="loginError" style="display: none; color: red; margin-bottom: 15px; padding: 10px; background-color: #fff0f0; border-radius: 5px;">
+                        Incorrect email or password. Please try again.
+                    </div>
+                    
+                    <form class="login-form" action="/wp1%20project/wp1%20project/php/validation.php" method="post">
+                        <input type="hidden" name="action" value="login">
+                        
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            <span class="error-message" id="emailError"></span>
                         </div>
                         
                         <div class="form-group">
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            <span class="error-message" id="passwordError"></span>
                         </div>
                         
                         <div class="checkbox-group">
@@ -55,7 +75,7 @@
                             <label for="remember">Remember me</label>
                         </div>
                         
-                        <a href="main_page.html"><button type="button" class="btn btn-primary">Sign In</button></a>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
                     </form>
                     
                     <div class="login-footer">
@@ -78,11 +98,9 @@
         </section>
     </main>
 
-    <script>
-        function toggleNav() {
-            var navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+    <!-- External JavaScript Files -->
+    <script src="js/navigation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

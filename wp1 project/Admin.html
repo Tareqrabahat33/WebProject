@@ -21,8 +21,14 @@
     <div class="nav-links" id="navLinks">
       <a href="main_page.html">Home</a>
       <a href="product_page.html">Products</a>
-      <a href="login.html">Log In</a>
-      <a href="sign_up.html">Sign Up</a>
+      <span id="authLinks">
+        <a href="login.html">Log In</a>
+        <a href="sign_up.html">Sign Up</a>
+      </span>
+      <span id="userLinks">
+        <a href="#" id="welcomeUser">Welcome, User</a>
+        <a href="/wp1%20project/wp1%20project/php/logout.php">Log Out</a>
+      </span>
       <a href="contact_page.html">Contact us</a>
     </div>
   </nav>
@@ -79,33 +85,72 @@
 
         <section id="yacht-management" class="admin-panel">
           <h2>Yacht Management</h2>
-          <form class="admin-form">
+          <form class="admin-form" enctype="multipart/form-data">
             <div class="form-group">
               <label for="yacht-model">Yacht Model:</label>
-              <input type="text" id="yacht-model" name="yacht-model" placeholder="Enter yacht model" required>
+              <input type="text" id="yacht-model" name="model" placeholder="Enter yacht model" required>
             </div>
 
             <div class="form-group">
-              <label for="yacht-price">Price in US Dollars ($):</label>
-              <input type="number" id="yacht-price" name="yacht-price" placeholder="Enter price" required>
+              <label for="yacht-length">Length (ft):</label>
+              <input type="text" id="yacht-length" name="length" placeholder="Enter length" required>
+            </div>
+
+            <div class="form-group">
+              <label for="yacht-year">Year:</label>
+              <input type="number" id="yacht-year" name="year" placeholder="Enter year" required>
+            </div>
+
+            <div class="form-group">
+              <label for="yacht-cabins">Number of Cabins:</label>
+              <input type="number" id="yacht-cabins" name="cabins" placeholder="Enter number of cabins" required>
+            </div>
+
+            <div class="form-group">
+              <label for="yacht-rent-price">Rent Price per Day ($):</label>
+              <input type="number" id="yacht-rent-price" name="rent_price" placeholder="Enter rent price" required>
+            </div>
+
+            <div class="form-group">
+              <label for="yacht-price">Buy Price ($):</label>
+              <input type="number" id="yacht-price" name="buy_price" placeholder="Enter buy price" required>
             </div>
 
             <div class="form-group">
               <label for="yacht-status">Status:</label>
-              <select id="yacht-status" name="yacht-status">
-                <option value="available">Available</option>
-                <option value="sold">Sold</option>
-                <option value="reserved">Reserved</option>
+              <select id="yacht-status" name="status">
+                <option value="Available">Available</option>
+                <option value="Best Seller">Best Seller</option>
+                <option value="Premium">Premium</option>
+                <option value="Sale">Sale</option>
+                <option value="Flagship">Flagship</option>
+                <option value="Sold">Sold</option>
               </select>
             </div>
 
             <div class="form-group">
+              <label for="yacht-category">Category:</label>
+              <select id="yacht-category" name="category">
+                <option value="Luxury">Luxury</option>
+                <option value="Performance">Performance</option>
+                <option value="Cruiser">Cruiser</option>
+                <option value="Special Offers">Special Offers</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="yacht-image">Yacht Image:</label>
+              <input type="file" id="yacht-image" name="image" accept="image/*">
+            </div>
+
+            <div class="form-group">
               <label for="yacht-description">Description:</label>
-              <textarea id="yacht-description" name="yacht-description" rows="4" placeholder="Enter yacht description"></textarea>
+              <textarea id="yacht-description" name="description" rows="4" placeholder="Enter yacht description" required></textarea>
             </div>
 
             <button type="submit" class="admin-btn admin-btn-gold">Add Yacht</button>
           </form>
+          <div id="yacht-list"></div>
         </section>
 
         <section id="site-settings" class="admin-panel">
@@ -131,22 +176,8 @@
     </div>
   </footer>
 
-  <script>
-    function toggleNav() {
-      var navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('active');
-    }
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      const sidebarLinks = document.querySelectorAll('.admin-sidebar a');
-      
-      sidebarLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          sidebarLinks.forEach(l => l.classList.remove('active'));
-          this.classList.add('active');
-        });
-      });
-    });
-  </script>
+  <script src="js/navigation.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/admin.js"></script>
 </body>
 </html>

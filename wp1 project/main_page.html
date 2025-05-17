@@ -6,6 +6,7 @@
     <title>Louis BOATton - Luxury Yachts</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main_page.css">
+    <link rel="stylesheet" href="css/auth-nav.css">
     <link rel="stylesheet" href="css/slider.css">
 </head>
 <body>
@@ -22,8 +23,15 @@
         <div class="nav-links" id="navLinks">
             <a href="main_page.html">Home</a>
             <a href="product_page.html">Products</a>
-            <a href="login.html">Log In</a>
-            <a href="sign_up.html">Sign Up</a>
+            <!-- These links will change depending on login status -->
+            <span id="authLinks">
+                <a href="login.html">Log In</a>
+                <a href="sign_up.html">Sign Up</a>
+            </span>
+            <span id="userLinks">
+                <a href="#" id="welcomeUser">Welcome, User</a>
+                <a href="/wp1%20project/wp1%20project/php/logout.php">Log Out</a>
+            </span>
             <a href="contact_page.html">Contact us</a>
         </div>
     </nav>
@@ -120,5 +128,7 @@
     <!-- External JavaScript Files -->
     <script src="js/navigation.js"></script>
     <script src="js/slider.js"></script>
+    
+    <script src="js/auth.js"></script>
 </body>
 </html>

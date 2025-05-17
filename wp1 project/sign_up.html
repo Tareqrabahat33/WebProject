@@ -6,6 +6,7 @@
     <title>Sign Up - Louis BOATton</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/signup_page.css">
+    <link rel="stylesheet" href="css/auth-nav.css">
 </head>
 <body>
     <nav>
@@ -21,8 +22,15 @@
         <div class="nav-links" id="navLinks">
             <a href="main_page.html">Home</a>
             <a href="product_page.html">Products</a>
-            <a href="login.html">Log In</a>
-            <a href="sign_up.html">Sign Up</a>
+            <!-- These links will change depending on login status -->
+            <span id="authLinks">
+                <a href="login.html">Log In</a>
+                <a href="sign_up.html">Sign Up</a>
+            </span>
+            <span id="userLinks">
+                <a href="#" id="welcomeUser">Welcome, User</a>
+                <a href="/wp1%20project/wp1%20project/php/logout.php">Log Out</a>
+            </span>
             <a href="contact_page.html">Contact us</a>
         </div>
     </nav>
@@ -39,31 +47,40 @@
                     <h2>Create Your Account</h2>
                     <p>Fill in the details below to register for a Louis BOATton account.</p>
                     
-                    <form class="signup-form" action="/sign-up" method="post">
+                    <div id="signupError" style="display: none; color: red; margin-bottom: 15px; padding: 10px; background-color: #fff0f0; border-radius: 5px;"></div>
+                    
+                    <form class="signup-form" action="/wp1%20project/wp1%20project/php/validation.php" method="post" id="signupForm">
+                        <input type="hidden" name="action" value="register">
+                        
                         <div class="form-group">
-                            <label for="fullname">Full Name</label>
-                            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            <span class="error-message" id="nameError"></span>
                         </div>
                         
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            <span class="error-message" id="emailError"></span>
                         </div>
                         
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            <span class="error-message" id="phoneError"></span>
                         </div>
                         
                         <div class="form-group">
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" placeholder="Create a password" required>
-                            <small>Password must be at least 8 characters long and include a number and special character</small>
+                            <small>Password must be at least 6 characters long</small>
+                            <span class="error-message" id="passwordError"></span>
                         </div>
                         
                         <div class="form-group">
                             <label for="confirm-password">Confirm Password</label>
-                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                            <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password" required>
+                            <span class="error-message" id="confirmError"></span>
                         </div>
                         
                         <div class="form-group checkbox-group">
@@ -135,20 +152,11 @@
         </div>
     </footer>
 
-    <script>
-        function toggleNav() {
-            var navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-        function showconfirm(){
-            let res=confirm("we will be able to access your personal info, sure you want to procced?");
-            if (res){
-                console.log("confirmed")
-            } else{
-                console.log("canceled")
-            }
-        }
-    </script>
+    <!-- External JavaScript Files -->
+    <script src="js/navigation.js"></script>
+    <script src="js/auth.js"></script>
+    
+    <script src="js/signup.js"></script>
 
 </body>
 </html>

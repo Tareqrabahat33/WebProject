@@ -1,0 +1,47 @@
+/* Fix for navigation alignment */
+.nav-links span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-links #authLinks a,
+.nav-links #userLinks a {
+    display: inline-block;
+    padding: 14px 18px;
+    color: var(--off-white);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links #authLinks a::after,
+.nav-links #userLinks a::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 18px;
+    right: 18px;
+    height: 2px;
+    background-color: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links #authLinks a:hover::after,
+.nav-links #userLinks a:hover::after,
+.nav-links #authLinks a:focus::after,
+.nav-links #userLinks a:focus::after {
+    transform: scaleX(1);
+}
+
+.nav-links #authLinks a:hover,
+.nav-links #userLinks a:hover,
+.nav-links #authLinks a:focus,
+.nav-links #userLinks a:focus {
+    color: var(--gold);
+}
+
+/* Remove inline styles */
+#userLinks {
+    display: none;
+}

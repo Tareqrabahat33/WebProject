@@ -6,6 +6,7 @@
     <title>Our Yacht Collection - Louis BOATton</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/product_page.css">
+    <link rel="stylesheet" href="css/auth-nav.css">
 </head>
 <body>
     
@@ -22,8 +23,15 @@
         <div class="nav-links" id="navLinks">
             <a href="main_page.html">Home</a>
             <a href="product_page.html">Products</a>
-            <a href="login.html">Log In</a>
-            <a href="sign_up.html">Sign Up</a>
+            <!-- These links will change depending on login status -->
+            <span id="authLinks">
+                <a href="login.html">Log In</a>
+                <a href="sign_up.html">Sign Up</a>
+            </span>
+            <span id="userLinks">
+                <a href="#" id="welcomeUser">Welcome, User</a>
+                <a href="/wp1%20project/wp1%20project/php/logout.php">Log Out</a>
+            </span>
             <a href="contact_page.html">Contact us</a>
         </div>
     </nav>
@@ -222,43 +230,9 @@
         </div>
     </footer>
     
-    <script>
-        function toggleNav() {
-            var navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Filter functionality
-            const filterTags = document.querySelectorAll('.filter-tag');
-            
-            filterTags.forEach(tag => {
-                tag.addEventListener('click', function() {
-                    filterTags.forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                    // In a real application, you would filter the products here
-                });
-            });
-            
-            // Rent/Buy toggle functionality
-            const rentOption = document.getElementById('rent-option');
-            const buyOption = document.getElementById('buy-option');
-            
-            // Default to rent option on page load
-            document.body.classList.remove('buy-mode');
-            
-            rentOption.addEventListener('click', function() {
-                rentOption.classList.add('active');
-                buyOption.classList.remove('active');
-                document.body.classList.remove('buy-mode');
-            });
-            
-            buyOption.addEventListener('click', function() {
-                buyOption.classList.add('active');
-                rentOption.classList.remove('active');
-                document.body.classList.add('buy-mode');
-            });
-        });
-    </script>
+    <!-- External JavaScript Files -->
+    <script src="js/navigation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/product.js"></script>
 </body>
 </html>
